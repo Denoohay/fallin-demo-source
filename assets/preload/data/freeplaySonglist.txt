@@ -1,2 +1,2 @@
-Bean Bam:fall-guy:7
-Earthquake:fall-guy:7
+Bean Bam:fall-guy:0
+Earthquake:fall-guy:0
