@@ -24,21 +24,18 @@ class StoryMenuState extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
-		['Bean Bam', 'Earthquake'],
-		['Rap Battle']
+		['Bean Bam', 'Earthquake']
 	];
 	var curDifficulty:Int = 1;
 
 	public static var weekUnlocked:Array<Bool> = [true, true];
 
 	var weekCharacters:Array<Dynamic> = [
-		['fall-guy', 'bf', 'gf'],
-		['rap-guy', '', '']
+		['fall-guy', 'bf', 'gf']
 	];
 
 	var weekNames:Array<String> = [
-		"Ultimate Knockout",
-		"https://www.youtube.com/watch?v=orjj9aeF3sY"
+		"Ultimate Knockout"
 	];
 
 	var txtWeekTitle:FlxText;
@@ -202,6 +199,12 @@ class StoryMenuState extends MusicBeatState
 		{
 			FlxG.fullscreen = !FlxG.fullscreen;
 		}
+
+		if (FlxG.keys.justPressed.R)
+		{
+			FlxG.switchState(new VoidSubstate());
+		}
+
 		// scoreText.setFormat('VCR OSD Mono', 32);
 		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, 0.5));
 
@@ -223,26 +226,14 @@ class StoryMenuState extends MusicBeatState
 		{
 			if (!selectedWeek)
 			{
-				if (FlxG.keys.justPressed.R)
+				if (controls.UP_P)
 				{
-					curWeek = 1;
-					FlxG.sound.music.stop();
-					var bullShit:Int = 0;
+					changeWeek(-1);
+				}
 
-					for (item in grpWeekText.members)
-					{
-						item.targetY = bullShit - curWeek;
-						if (item.targetY == Std.int(0) && weekUnlocked[curWeek])
-							item.alpha = 1;
-						else
-							item.alpha = 0.6;
-						bullShit++;
-					}
-
-					FlxG.sound.play(Paths.sound('bing'));
-					FlxG.sound.playMusic(Paths.music('void'));
-
-					updateText();
+				if (controls.DOWN_P)
+				{
+					changeWeek(1);
 				}
 
 				if (controls.RIGHT)

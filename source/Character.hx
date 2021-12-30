@@ -515,6 +515,22 @@ class Character extends FlxSprite
 				addOffset("singLEFT", 360, 140);
 				addOffset("singDOWN", 360, 140);
 
+			case 'old-man':
+				tex = Paths.getSparrowAtlas('characters/OldMan');
+				frames = tex;
+
+				animation.addByPrefix('idle', "oldIdle", 24, false);
+				animation.addByPrefix('singUP', "oldSingUp", 24, false);
+				animation.addByPrefix('singDOWN', "oldSingDown", 24, false);
+				animation.addByPrefix('singLEFT', 'oldSingLeft', 24, false);
+				animation.addByPrefix('singRIGHT', 'oldSingRight', 24, false);
+
+				addOffset('idle', 360, 140);
+				addOffset("singUP", 360, 140);
+				addOffset("singRIGHT", 360, 140);
+				addOffset("singLEFT", 360, 140);
+				addOffset("singDOWN", 360, 140);
+
 			case 'rapguy':
 				tex = Paths.getSparrowAtlas('characters/rapguy');
 				frames = tex;

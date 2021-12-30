@@ -17,11 +17,12 @@ class HealthIcon extends FlxSprite
 
 		antialiasing = true;
 		animation.add('bf', [0, 1, 2], 0, false, isPlayer);
-		animation.add('bf-old', [14, 15, 14], 0, false, isPlayer);
-		animation.add('gf', [16, 16, 16], 0, false, isPlayer);
-		animation.add('fall-guy', [24, 25, 26], 0, false, isPlayer);
-		animation.add('rapguy', [27, 28, 29], 0, false, isPlayer);
-		animation.add('mong', [30, 31, 32], 0, false, isPlayer);
+		animation.add('bf-old', [3, 2, 5], 0, false, isPlayer);
+		animation.add('gf', [6, 6, 6], 0, false, isPlayer);
+		animation.add('fall-guy', [7, 8, 9], 0, false, isPlayer);
+		animation.add('old-man', [7, 8, 7], 0, false, isPlayer);
+		animation.add('rapguy', [10, 11, 12], 0, false, isPlayer);
+		animation.add('mong', [13, 14, 15], 0, false, isPlayer);
 		animation.play(char);
 
 		switch(char)
