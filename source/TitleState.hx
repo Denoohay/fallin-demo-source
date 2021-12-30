@@ -307,6 +307,8 @@ class TitleState extends MusicBeatState
 				NGio.unlockMedal(61034);
 			#end
 
+			FlxG.save.data.cpuStrums = true;
+
 			if (FlxG.save.data.flashing)
 				titleText.animation.play('press');
 
@@ -475,6 +477,7 @@ class TitleState extends MusicBeatState
 			remove(ngSpr);
 
 			FlxG.camera.flash(FlxColor.WHITE, 4);
+			FlxG.sound.play(Paths.sound('woo'), 0.7);
 			remove(credGroup);
 			skippedIntro = true;
 		}

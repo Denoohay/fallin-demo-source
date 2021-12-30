@@ -39,7 +39,7 @@ class DemoButItsOnTheTitleSubState extends MusicBeatState
 		}
 		if (FlxG.keys.justPressed.P)
 		{
-			fancyOpenURL("https://twitter.com/EpicPlayer200");
+			fancyOpenURL("https://twitter.com/EpicPlayer200/status/1474895636776435712");
 		}
 		if (controls.ACCEPT)
 		{
