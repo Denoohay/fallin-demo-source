@@ -336,17 +336,17 @@ class TitleState extends MusicBeatState
 						trace('outdated lmao! ' + returnedData[0] + ' != ' + MainMenuState.kadeEngineVer);
 						OutdatedSubState.needVer = returnedData[0];
 						OutdatedSubState.currChanges = returnedData[1];
-						FlxG.switchState(new DemoButItsOnTheTitleSubState());
+						FlxG.switchState(new MainMenuState());
 					}
 					else
 					{
-						FlxG.switchState(new DemoButItsOnTheTitleSubState());
+						FlxG.switchState(new MainMenuState());
 					}
 				}
 				
 				http.onError = function (error) {
 				  trace('error: $error');
-				  FlxG.switchState(new DemoButItsOnTheTitleSubState()); // fail but we go anyway
+				  FlxG.switchState(new MainMenuState()); // fail but we go anyway
 				}
 				
 				http.request();
@@ -411,7 +411,7 @@ class TitleState extends MusicBeatState
 		switch (curBeat)
 		{
 			case 1:
-				createCoolText(['epicplayerZOO', 'and', 'frarly']);
+				createCoolText(['denoohay', 'and', 'frarly']);
 			// credTextShit.visible = true;
 			case 3:
 				addMoreText('present');

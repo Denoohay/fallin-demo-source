@@ -25,7 +25,7 @@ class DemoSubState extends MusicBeatState
 		FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
 		super.create();
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('message2'));
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('message'));
 		bg.antialiasing = true;
 		bg.screenCenter();
 		add(bg);
@@ -41,12 +41,12 @@ class DemoSubState extends MusicBeatState
 		if (controls.ACCEPT)
 		{
 			leftState = true;
-			FlxG.switchState(new DemoButItsOnTheTitleSubState());
+			FlxG.switchState(new MainMenuState());
 		}
 		if (controls.BACK)
 		{
 			leftState = true;
-			FlxG.switchState(new DemoButItsOnTheTitleSubState());
+			FlxG.switchState(new MainMenuState());
 		}
 		super.update(elapsed);
 	}
